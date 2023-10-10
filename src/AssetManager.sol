@@ -54,8 +54,6 @@ contract AssetManager is ERC20 {
             // ex: 18
             _UNDERLYING.decimals()
         )
-    // Sets the asset managerVault's owner, authority to the AssetManagerVaultFactory's owner, authority
-    // Auth(AssetManagerFactory(msg.sender).owner(), AssetManagerFactory(msg.sender).authority())
     {
         // Enforce BASE_FEE
         require(_BASE_FEE >= 0 && _BASE_FEE <= 100, "Fee Percent fails to meet [0, 100] bounds constraint.");
