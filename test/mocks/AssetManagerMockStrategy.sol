@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.10;
+pragma solidity ^0.8.10;
 
 import {ERC20} from "../../lib/solmate/src/erc20/ERC20.sol";
 import {SafeERC20} from "../../lib/solmate/src/erc20/SafeERC20.sol";
@@ -43,7 +43,7 @@ contract AssetManagerMockStrategy is ERC20("CV Mock Strategy", "cvsMOCK", 18), E
     using FixedPointMathLib for uint256;
 
     /*///////////////////////////////////////////////////////////////
-                           STRATEGY FUNCTIONS
+                        STRATEGY FUNCTIONS
     //////////////////////////////////////////////////////////////*/
 
     constructor(ERC20 _underlying) {
