@@ -8,7 +8,6 @@ import {FixedPointMathLib} from "../../lib/solmate/src/utils/FixedPointMathLib.s
 abstract contract Strategy is ERC20 {
     /// @notice Returns whether the strategy accepts ETH or an ERC20.
     /// @return True if the strategy accepts ETH, false otherwise.
-    /// @dev Only present in Fuse cTokens, not Compound cTokens.
     function isCEther() external view virtual returns (bool);
 
     /// @notice Withdraws a specific amount of underlying tokens from the strategy.
@@ -24,7 +23,6 @@ abstract contract Strategy is ERC20 {
 }
 
 /// @notice Minimal interface for Vault strategies that accept ERC20s.
-/// @dev Designed for out of the box compatibility with Fuse cERC20s.
 abstract contract ERC20Strategy is Strategy {
     /// @notice Returns the underlying ERC20 token the strategy accepts.
     /// @return The underlying ERC20 token the strategy accepts.

@@ -37,4 +37,22 @@ contract AssetManagerTest is Test {
 
     /// @dev BASE_UNIT variable used in the contract
     uint256 public immutable BASE_UNIT = 10 ** 18;
+
+    // add in tests for
+
+    // happy paths:
+    // asset manager builds successfully, with all expected input parameters, and deploys
+    // user can enter an exit pool succesfully
+    // user can enter an exit multiple pools succesfully
+    // ERC20 propoerly initializes
+    // profitable strategy
+    // multiple withdraws in profitable strategy
+    //
+
+    // unhappy paths
+    // fail with insufficient approval
+    // fail with zero deposit
+    // fail if user withdraws with zero balance
+    // fail if user withdraws with insufficient balance
+    // fuzz nessecary functions with bounded inputs
 }
